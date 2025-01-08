@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top,black, #003d4d,rgb(0, 28, 150), #053e83,black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mainDiv {
+    background:linear-gradient(to right, #5102c1, #0286b5);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+#emptys {
+    width: 100%;
+    height:30px;
+    color: red;
+    margin-bottom: 15px;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 20px;
+    /* background-color: #fff; */
+}
+
+#ageDisplayContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.c1, .c2, .c3 {
+    flex: 1;
+    text-align: center;
+    border: 2px solid transparent; 
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 5px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(183, 151, 151)), linear-gradient(to right, #ff5f6d, #ffc371); 
+    background-clip: padding-box, border-box; 
+    border-width: 2px;
+    transition: box-shadow 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+
+label {
+    font-weight: bold;
+    color: #fffcfc;
+}
+
+h1#AgeYear, h1#AgeMonth, h1#AgeDay {
+    font-size: 24px;
+    color: #0072ff;
+    transition: color 0.3s;
+}
+
+h1#AgeYear:hover,
+h1#AgeMonth:hover,
+h1#AgeDay:hover {
+    color: #ff5f6d; 
+}
+
+input[type="date"] {
+    padding: 10px;
+    border: 2px solid #0072ff; 
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+    border-color: #ff5f6d; 
+    outline: none;
+}
+
+button {
+    background: linear-gradient(45deg,red,black); 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff5f6d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

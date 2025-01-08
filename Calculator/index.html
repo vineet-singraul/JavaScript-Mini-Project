@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div id="calculator">
+        <input type="text" id="display" disabled placeholder="0">
+        <div id="buttons">
+            <button id="clear" class="button" onclick="CleareAll()">AC</button>
+            <button id="backspace" class="button" onclick="CleareOne()">⌫</button>
+            <button id="modulus" class="button  key" onclick="Pressed('%')">%</button>
+            <button id="divide" class="button key" onclick="Pressed('/')">/</button>
+
+            <button id="seven" class="button" onclick="Pressed('7')">7</button>
+            <button id="eight" class="button" onclick="Pressed('8')">8</button>
+            <button id="nine" class="button" onclick="Pressed('9')">9</button>
+            <button id="multiply" class="button key" onclick="Pressed('*')">*</button>
+
+            <button id="four" class="button" onclick="Pressed('4')">4</button>
+            <button id="five" class="button" onclick="Pressed('5')">5</button>
+            <button id="six" class="button" onclick="Pressed('6')">6</button>
+            <button id="subtract" class="button key" onclick="Pressed('-')">-</button>
+
+            <button id="one" class="button" onclick="Pressed('1')">1</button>
+            <button id="two" class="button" onclick="Pressed('2')">2</button>
+            <button id="three" class="button" onclick="Pressed('3')">3</button>
+            <button id="add" class="button key" onclick="Pressed('+')">+</button>
+
+            <button id="zero" class="button" onclick="Pressed('0')">0</button>
+            <button id="decimal" class="button" onclick="Pressed('.')">.</button>
+            <button id="equal" class="button" onclick="EqalTo()">=</button>
+            <button id="equal" class="button" onclick="Sqar()">^2</button>
+            <button id="equal" class="button" onclick="Qube()">^3</button>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

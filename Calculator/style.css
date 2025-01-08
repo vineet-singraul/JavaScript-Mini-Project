@@ -1,0 +1,90 @@
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(9, 0, 2) 25%, #00055e 50%, rgb(68, 22, 22) 75%, rgb(2, 7, 0) 100%);
+    margin: 0;
+}
+
+#calculator {
+    background: #222;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 320px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#display {
+    width: 285px;
+    background: #333;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2em;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    text-align: right;
+    outline: none;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background: #fff; /* Set button color to white */
+    border: none;
+    border-radius: 10px;
+    color: #000; /* Set text color to black for contrast */
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px black, inset 0 5px 10px black; /* Black outer and inset shadow */
+}
+
+.button:active {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px black, inset 0 10px 20px black; /* Enhanced inset shadow on active state */
+}
+
+#operator {
+    background: #f39c12;
+}
+
+#equal {
+    background: #27ae60;
+    grid-column: span 1;
+}
+
+#clear {
+    background: #c0392b;
+    grid-column: span 2;
+}
+
+#backspace {
+    background: #8e44ad;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.key{
+    background-color: #e9ce02;
+}
+
