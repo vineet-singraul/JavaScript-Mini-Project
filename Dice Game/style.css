@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    position: relative; 
+}
+
+#main_div1, #main_div2, #main_div3, #main_div4, #main_div5, #main_div6 {
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap; /* Change here for wrapping */
+    opacity: 0;
+    gap: 70px;
+}
+
+#main_div1 {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.7), rgba(255, 165, 0, 0.7));
+}
+
+#main_div2 {
+    background: linear-gradient(45deg, rgba(255, 255, 0, 0.7), rgba(0, 128, 0, 0.7));
+    opacity: 1;
+}
+
+#main_div3 {
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.7), rgba(75, 0, 130, 0.7));
+}
+
+#main_div4 {
+    background: linear-gradient(45deg, rgba(255, 20, 147, 0.7), rgba(138, 43, 226, 0.7));
+}
+
+#main_div5 {
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 191, 255, 0.7));
+}
+
+#main_div6 {
+    background: linear-gradient(45deg, rgba(78, 0, 89, 0.8), rgba(25, 0, 45, 0.8), rgba(2, 2, 189, 0.8));
+}
+
+#child_div {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+button {
+    padding: 30px 80px;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background: linear-gradient(45deg, red, green, blue);
+    color: white; 
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #main_div1, #main_div2, #main_div3, #main_div4, #main_div5, #main_div6 {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    #child_div {
+        width: 60px;
+        height: 60px;
+    }
+
+    button {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main_div1, #main_div2, #main_div3, #main_div4, #main_div5, #main_div6 {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #child_div {
+        width: 50px;
+        height: 50px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
