@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        #image_div {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            /* Set height as needed */
+            overflow: hidden;
+        }
+
+        #img {
+            width: 100%;
+            height: 80%;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image_div">
+        <img id="img" src="/_00----image/f-1.png" alt="">
+    </div>
+    <button id="btnLeft" onclick="moveLeft()">|| left</button>
+    <button id="btnRight" onclick="moveRight()">right ||</button>
+
+
+    <script>
+        let mainDiv = document.querySelector("#image_div");
+        let image = document.querySelector("#img")
+
+        let buttonLeft = document.querySelector("#btnLeft")
+        let buttonRight = document.querySelector("#btnRight")
+
+        let arr = [
+            'https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/4c4320b645577e33.jpeg?q=20',
+            'https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/105f2a3509c5a1ca.jpeg?q=20',
+            'https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/c857932113f9e5ad.jpg?q=20'
+        ];
+
+
+        let currentIndex = 0;
+
+        updateImage = () => {
+            image.src = arr[currentIndex];
+        }
+
+        const moveLeft = () => {
+            currentIndex = (currentIndex === 0) ? arr.length - 1 : currentIndex - 1;
+            updateImage();
+        }
+
+        const moveRight = () => {
+            currentIndex = (currentIndex === arr.length - 1) ? 0 : currentIndex + 1;
+            updateImage();
+        };
+        updateImage()
+
+    </script>
+</body>
+
+</html>

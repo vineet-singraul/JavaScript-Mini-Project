@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <button id="leftbtn" onclick="MoveLeft()">👈🚗Left</button>
+        <div class="container" id="container">
+            <img src="/_00----image/f-1.png" alt="Image 1">
+            <img src="/_00----image/f-2.png" alt="Image 2">
+            <img src="/_00----image/f-3.png" alt="Image 3">
+            <img src="/_00----image/f-4.png" alt="Image 4">
+            <img src="/_00----image/f-5.png" alt="Image 5">
+        </div>
+        <button id="rightbtn" onclick="MoveRight()">🛻👉Right</button>
+    </nav>
+
+
+
+    <script>
+        let MainContainer = document.querySelector("#container");
+        let imagees = document.querySelector("#imga");
+        let LeftButton = document.querySelector("#leftbtn");
+        let RightButton = document.querySelector("#rightbtn");
+
+        MoveLeft = () => {
+            MainContainer.scrollLeft -= 1355;
+        }
+
+        MoveRight = () => {
+            MainContainer.scrollLeft += 1355;
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

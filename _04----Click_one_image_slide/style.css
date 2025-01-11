@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+#leftbtn, #rightbtn {
+    font-size: 18px;
+    padding: 80px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#leftbtn:hover, #rightbtn:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    flex-direction: row;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}

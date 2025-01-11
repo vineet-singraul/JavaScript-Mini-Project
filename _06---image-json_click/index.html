@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Image Scroll</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5a5757;
+    font-family: Arial, sans-serif;
+}
+
+#parent_div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 350px;
+    background: #c55656;
+    border-radius: 10px;
+}
+
+#leftbtn,
+#rightbtn {
+    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+#leftbtn:hover,
+#rightbtn:hover {
+    transform: scale(1.1);
+}
+
+#main_div {
+    flex-grow: 1;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-behavior: smooth;
+    height: 100%;
+    padding: 10px;
+}
+
+#main_div::-webkit-scrollbar {
+    display: none;
+}
+
+#main_div {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#scrolled_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#scrolled_div img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+#scrolled_div p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="parent_div">
+        <button id="leftbtn">👈</button>
+        <div id="main_div"></div>
+        <button id="rightbtn">👉</button>
+    </div>
+
+    <script>
+        let dataImagesAll = [
+            { id: '1', image: '/image/c-1.png', page: 'Riya' },
+            { id: '2', image: '/image/c2.png', page: 'Priya' },
+            { id: '3', image: '/image/c3.png', page: 'Jiya' },
+            { id: '4', image: '/image/c4.png', page: 'Samay' },
+            { id: '5', image: '/image/c5.png', page: 'Vineet' },
+        ];
+
+        const ImageContainer = document.querySelector("#main_div");
+
+        const display = (value) => {
+            return `
+                <div class="scrolled_div">
+                    <img src="${value.image}">
+                    <p>${value.page}</p>
+                </div>`;
+        };
+
+        // Correctly map over the array and set innerHTML
+        ImageContainer.innerHTML = dataImagesAll.map(value => display(value)).join('');
+
+        const leftButton = document.getElementById('leftbtn');
+        const rightButton = document.getElementById('rightbtn');
+
+        leftButton.addEventListener('click', () => {
+            ImageContainer.scrollLeft -= 300; 
+        });
+
+        rightButton.addEventListener('click', () => {
+            ImageContainer.scrollLeft += 300;
+        });
+    </script>
+
+</body>
+
+</html>

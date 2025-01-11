@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button id="Leftbtn" onclick="moveLeft()"><p>👈</p></button>
+        <div id="container">
+            <div id="box">
+                <img id="img" src="/_00----image/c-1.png" alt="">
+                <img id="img" src="/_00----image/c2.png" alt="">
+                <img id="img" src="/_00----image/c3.png" alt="">
+                <img id="img" src="/_00----image/c4.png" alt="">
+                <img id="img" src="/_00----image/c5.png" alt="">
+                <img id="img" src="/_00----image/c9.png" alt="">
+                <img id="img" src="/_00----image/c10.png" alt="">
+            </div>
+            <div id="box">
+                <img id="img" src="/_00----image/c6.png" alt="">
+                <img id="img" src="/_00----image/c7.png" alt="">
+                <img id="img" src="/_00----image/c8.png" alt="">
+                <img id="img" src="/_00----image/c9.png" alt="">
+                <img id="img" src="/_00----image/c10.png" alt="">
+                <img id="img" src="/_00----image/c3.png" alt="">
+                <img id="img" src="/_00----image/c4.png" alt="">
+            </div>
+            <div id="box">
+                <img id="img" src="/_00----image/c6.png" alt="">
+                <img id="img" src="/_00----image/c7.png" alt="">
+                <img id="img" src="/_00----image/c8.png" alt="">
+                <img id="img" src="/_00----image/c9.png" alt="">
+                <img id="img" src="/_00----image/c10.png" alt="">
+                <img id="img" src="/_00----image/c3.png" alt="">
+                <img id="img" src="/_00----image/c4.png" alt="">
+            </div>
+            <div id="box">
+                <img id="img" src="/_00----image/c6.png" alt="">
+                <img id="img" src="/_00----image/c7.png" alt="">
+                <img id="img" src="/_00----image/c8.png" alt="">
+                <img id="img" src="/_00----image/c9.png" alt="">
+                <img id="img" src="/_00----image/c10.png" alt="">
+                <img id="img" src="/_00----image/c3.png" alt="">
+                <img id="img" src="/_00----image/c4.png" alt="">
+            </div>
+        </div>
+        <button id="Rightbtn" onclick="moveRight()"><p>👉</p></button>
+    </nav>
+
+
+
+    <script>
+        let LeftButton = document.querySelector("#Leftbtn");
+        let RightButton = document.querySelector("#Rightbtn");
+
+        let MainContainer = document.querySelector("#container");
+        let ImageBox = document.querySelector("#box");
+        let Images = document.querySelector("#img");
+
+        moveLeft=()=>{
+            MainContainer.scrollLeft -= 1000;
+        }
+
+        moveRight=()=>{
+            MainContainer.scrollLeft += 1000;
+        }
+
+
+    </script>
+</body>
+</html>

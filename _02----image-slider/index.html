@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swap</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #second_div {
+            width: 100vw;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            transition: all 2s;
+        }
+
+        #second_div img {
+            width: 100vw;
+            height: 60vh;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #second_div img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="second_div">
+        <img class="thumbnail" src="/image/p1.jpg" alt="Image 1">
+        <img class="thumbnail" src="/image/p2.jpg" alt="Image 2">
+        <img class="thumbnail" src="/image/p3.jpg" alt="Image 3">
+        <img class="thumbnail" src="/image/p4.jpg" alt="Image 4">
+        <img class="thumbnail" src="/image/p1.jpg" alt="Image 5">
+        <img class="thumbnail" src="/image/p2.jpg" alt="Image 6">
+        <img class="thumbnail" src="/image/p3.jpg" alt="Image 7">
+        <img class="thumbnail" src="/image/p4.jpg" alt="Image 8">
+    </div>
+
+    <div>
+        <button id="btnLeft">|| left</button>
+        <button id="btnRight">right ||</button>
+    </div>
+
+    <script>
+        const container = document.querySelector("#second_div");
+        let buttonLeft = document.querySelector("#btnLeft");
+        let buttonRight = document.querySelector("#btnRight");
+    
+        let count = 0;
+    
+        buttonLeft.addEventListener("click", () => {
+            container.scrollLeft -= 1200;
+            count++;
+            if (count >= 1) {
+                buttonLeft.style.visibility = 'hidden';
+            }
+            buttonRight.style.visibility = 'visible';
+        });
+    
+        buttonRight.addEventListener("click", () => {
+            container.scrollLeft += 1200;
+            count--;
+            if (count <= 0) {
+                buttonRight.style.visibility = 'hidden';
+            }
+            buttonLeft.style.visibility = 'visible';
+        });
+    
+        if (count === 0) {
+            buttonLeft.style.visibility = 'hidden';
+        }
+    </script>
+    
+</body>
+
+</html>
