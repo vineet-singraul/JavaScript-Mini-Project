@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cards Of Paicent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+        }
+
+        #Display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-wrap: wrap;
+            background: linear-gradient(45deg, rgb(37, 0, 71), rgb(0, 66, 76), rgb(31, 0, 99));
+        }
+
+        #cards {
+            background: linear-gradient(45deg, rgba(86, 0, 167, 0.501), rgba(5, 0, 61, 0.547), rgba(0, 53, 68, 0.515));
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 2px solid yellow;
+            border-top: 2px solid red;
+            border-left: 2px solid blueviolet;
+            border-right: 2px solid wheat;
+            margin: 50px;
+        }
+
+        input[type="search"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            position: fixed;
+            top: 0%;
+            left: 30%;
+            z-index: 1000;
+
+        }
+
+        #cards:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        #name {
+            text-align: center;
+            font-size: 2.2em;
+            color: #d0ff00;
+            margin-bottom: 20px;
+        }
+
+        #detailsMainDiv {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            margin: 20px;
+        }
+
+        #detailsDiv {
+            padding: 10px;
+            border-bottom: 1px solid #00dfd7;
+        }
+
+        #d1 {
+            font-weight: bold;
+            color: #00b1d0;
+        }
+
+        #datas span {
+            display: block;
+            color: #e7a100;
+        }
+
+        .highlight {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            background-color: #043845;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .footer input[type="button"] {
+            background-color: #d35800;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer input[type="button"]:hover {
+            background-color: #008d3d;
+            transform: translateY(-2px);
+        }
+
+        #del {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 600;
+            background-color: red;
+        }
+
+        #edi {
+            color: #2980b9;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #002886;
+        }
+
+        @media (max-width: 600px) {
+            #detailsMainDiv {
+                grid-template-columns: 1fr;
+            }
+
+            #name {
+                font-size: 1.8em;
+            }
+        }
+
+
+
+
+/* Form Elements Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background: #68008a87;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgb(0, 0, 0);
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#input1, #input2 {
+  flex: 1 1 100%; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  color: #ffffff;
+}
+
+input,
+textarea,
+select {
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s ease;
+  background: #7500f277;
+  color: #ffffff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a11cb; 
+  background: #74007866;
+  box-shadow: 0 4px 8px rgba(106, 17, 203, 0.2);
+  color: #ffffff;
+}
+
+textarea {
+  resize: none; 
+}
+
+input[readonly] {
+    background: #6000ac8a;
+    border-color: #ccc;
+    color: #ff0000;
+    cursor: not-allowed;
+    width: 20vw;
+    font-size: 30px;
+}
+
+input[type="button"] {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+input[type="button"]:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(5, 0, 11, 0.3);
+}
+
+input[type="button"]:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  #FormDataInCards {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  form {
+    gap: 10px;
+  }
+}
+
+
+    </style>
+
+</head>
+
+<body onload="fetchData()">
+
+    <input type="search" placeholder="search Your Data" id="searchvalue" oninput="searchh()">
+
+    <!-- Display All Cards of Paicent -->
+    <div id="Display">
+    </div>
+
+
+
+    <!--  Display Form In Card Page  -->
+    <div id="FormDataInCards">
+    </div>
+
+
+    <div id="paging"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Cards.js"></script>  
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            background: linear-gradient(45deg, #000b68, #004b3b, black);
+            border-radius: 10px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #input1,
+        #input2 {
+            flex: 1;
+            min-width: 450px;
+            background: linear-gradient(45deg, #613100, #2b0303, #075b32);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 0 0 10px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        #price,
+        textarea {
+            width: 85%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            background-color: #272323;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        input:focus,
+        select:focus,
+        #price,
+        textarea:focus {
+            border-color: #000000;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        #button:active {
+            background-color: #0056b3;
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Request a Meeting with Doctor</h1>
+        </div>
+        <form id="appointmentForm">
+            <div id="input1">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required
+                    placeholder="Enter your full name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required
+                    placeholder="Enter your email address">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required
+                    placeholder="Enter your phone number">
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required
+                    placeholder="Enter your address">
+
+                <label for="doctor">Select Doctor</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">--Choose a doctor--</option>
+                    <option value="Dr. John Doe">Dr. John Doe (Cardiologist --- हृदय रोग विशेषज्ञ)</option>
+                    <option value="Dr. Sarah Johnson">Dr. Sarah Johnson (Dermatologist --- त्वचा रोग विशेषज्ञ)</option>
+                    <option value="Dr. Emily Davis">Dr. Emily Davis (Pediatrician --- बाल रोग विशेषज्ञ)</option>
+                    <option value="Dr. Michael Brown">Dr. Michael Brown (Orthopedic Surgeon --- अस्थि सर्जन)</option>
+                    <option value="Dr. Linda Smith">Dr. Linda Smith (Neurologist --- तंत्रिका रोग विशेषज्ञ)</option>
+                    <option value="Dr. Robert Wilson">Dr. Robert Wilson (Oncologist --- कैंसर रोग विशेषज्ञ)</option>
+                    <option value="Dr. Jennifer Martinez">Dr. Jennifer Martinez (Family Medicine --- परिवार चिकित्सा)</option>
+                    <option value="Dr. David Anderson">Dr. David Anderson (Gastroenterologist --- पाचन तंत्र विशेषज्ञ)</option>
+                    <option value="Dr. Karen Taylor">Dr. Karen Taylor (Psychiatrist --- मानसिक स्वास्थ्य विशेषज्ञ)</option>
+                    <option value="Dr. James Thomas">Dr. James Thomas (Endocrinologist --- अंतःस्रावी विशेषज्ञ)</option>
+                    <option value="Dr. Patricia Moore">Dr. Patricia Moore (Ophthalmologist --- नेत्र रोग विशेषज्ञ)</option>
+                    <option value="Dr. Christopher Jackson">Dr. Christopher Jackson (Urologist --- मूत्र रोग विशेषज्ञ)</option>
+                    <option value="Dr. Jessica White">Dr. Jessica White (Obstetrician/Gynecologist --- स्त्री रोग विशेषज्ञ)</option>
+                    
+                </select>
+            </div>
+
+            <div id="input2">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="reason">Problem</label>
+                <textarea id="reason" name="reason" rows="5" required
+                    placeholder="Enter the reason for your visit"></textarea>
+
+                <label for="peice">Conseltancee Fee</label>
+                <input type="number" id="price" value="300" readonly>
+
+                <label for="medicalHistory">Medical History (if any)</label>
+                <textarea id="medicalHistory" name="medicalHistory" rows="4"
+                    placeholder="Briefly describe your medical history"></textarea>
+            </div>
+        </form>
+        <div class="footer">
+            <input type="button" value="Submit Appointment Request" id="button" onclick="return SendDataToCard()">
+            <p>We will contact you to confirm your appointment.</p>
+        </div>
+    </div>
+
+
+    <script src="Cards.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: ".container",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color1: 0x0,
+            colorMode: "lerp",
+            birdSize: 1.10,
+            wingSpan: 40.00,
+            speedLimit: 10.00,
+            separation: 100.00,
+            alignment: 100.00,
+            cohesion: 100.00
+        })
+    </script>
+</body>
+
+</html>

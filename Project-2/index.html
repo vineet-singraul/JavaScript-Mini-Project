@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Image/download.png">
+    <title>Signup page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <h2>Create an Account</h2> -->
+    <div class="signup-container">
+        <div class="imageSignupDiv">
+            <video src="/vidio/vidio.mp4" autoplay muted loop preload="auto"
+                poster="/images/poster.jpg" playsinline data-aos="zoom-out-up" data-aos-duration="1500" ></video>
+        </div>
+        <form action="#" autoplay control data-aos="fade-down" data-aos-duration="1500" >
+            <div class="form-group">
+                <label for="fullName" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">
+            </div>
+            <div class="form-group">
+                <label for="email" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email address" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="800">
+            </div>
+            <div class="form-group">
+                <label for="location" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1000">Add Location</label>
+                <input type="text" id="location" placeholder="Enter your location" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1200">
+            </div>
+            <div class="form-group">
+                <label for="phone" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1400">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1600">
+            </div>
+            <div class="form-group">
+                <label for="password" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1800">Password</label>
+                <input type="password" id="password" placeholder="Create a password" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="2000">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="2200">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="2400">
+            </div>
+            
+            
+            <div class="form-group">
+                <input type="submit" value="Singup" id="sub" onclick="return SubmitAllData()" data-aos="fade-left"data-aos-anchor="#example-anchor"data-aos-offset="500"data-aos-duration="1900">
+            </div>
+            <div class="form-group">
+                <p>Already have an account? <a href="/Login.html">Login here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="scriptSingup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "#body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color1: 0x0,
+            colorMode: "lerp",
+            birdSize: 1.10,
+            wingSpan: 40.00,
+            speedLimit: 10.00,
+            separation: 100.00,
+            alignment: 100.00,
+            cohesion: 100.00
+        })
+    </script>
+</body>
+
+</html>

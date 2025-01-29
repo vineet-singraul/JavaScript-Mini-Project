@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/download.png">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main page style link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Link of Text And Image Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .vid{
+            /* border: 4px solid red; */
+            border-radius: 30px;
+            margin: 100px;
+        }
+    </style>
+
+    <title id="he">Home Page</title>
+
+</head>
+
+<body>
+    <!-- Nav of Medical Care -->
+    <nav>
+        <div id="Logo">
+            <img src="/Image/download.png" class="image" data-aos="flip-left"
+                data-aos-duration="2000">
+            <p id="manu" onclick="DisplayList()" data-aos="fade-down"><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div id="MoreContaines">
+            <ul class="ul" data-aos="fade-down">
+                <li class="list" data-aos="fade-down" data-aos-duration="100"><a
+                        href="/Pages/Home.html">Home</a>
+                </li>
+                <li class="list" data-aos="fade-down" data-aos-duration="500"><a href="specificity.html">Our
+                        speciality</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="900"><a
+                        href="">surgery</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1300"><a
+                        href="/Pages/Book Apointment.html">Book
+                        Appointment</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1700"><a href="OrderMedicalCare.html">Order
+                        Medical Care</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="2400"><a href="">Vidio
+                        Confrensing</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="3000"><a href="">
+                        Feedback</a></li>
+            </ul>
+        </div>
+
+        <div id="userDetails" data-aos="fade-left" data-aos-duration="2000">
+            <div class="logoDivuser">
+                <!-- <i class="fa-solid fa-user" id="Location"></i> -->
+                <i class="fa-solid fa-ellipsis-vertical" onclick="toggleLogout()"></i>
+                <p id="logout"  onclick="ClosePage()">logout</p>
+            </div>
+            <button>
+                <p id="name"></p>
+            </button>
+            <p id="location"></p>
+        </div>
+    </nav>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Swiper Section of Body -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide" data-aos="zoom-in" data-aos-offset="400"
+                data-aos-duration="2500">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Devita Singh 🩺</h1>
+                        <h3 class="DocSpaciality">Heart Surgeon ❤️</h3>
+                        <strong class="DocExpiriance">7 Years of Experience 🔥</strong>
+                        <p class="DocAvord">🏆 5 Doctor Awards Received</p>
+                        <p class="DocAbout">"Dedicated to providing exceptional cardiac care with
+                            precision and compassion. Passionate about improving heart health
+                            globally." 🌍</p>
+                    </div>
+                    <img src="/Image/S1.png" alt="Dr. Vineet Singh">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Priya Sharma 🌟</h1>
+                        <h3 class="DocSpaciality">Dermatologist ✨</h3>
+                        <strong class="DocExpiriance">10 Years of Experience 👩‍⚕️</strong>
+                        <p class="DocAvord">🏆 3 Prestigious Awards</p>
+                        <p class="DocAbout">"Committed to enhancing skin health and confidence with
+                            advanced treatments and personalized care." 💖</p>
+                    </div>
+                    <img src="/Image/S2.png" alt="Dr. Priya Sharma">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Ramesh Verma ⚕️</h1>
+                        <h3 class="DocSpaciality">Orthopedic Specialist 💪</h3>
+                        <strong class="DocExpiriance">15 Years of Experience 🏋️</strong>
+                        <p class="DocAvord">🏆 6 Professional Recognitions</p>
+                        <p class="DocAbout">"Passionate about restoring mobility and improving
+                            quality of life through innovative orthopedic solutions." 🚴</p>
+                    </div>
+                    <img src="/Image/S3.png" alt="Dr. Ramesh Verma">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Ayesha Khan 👩‍⚕️</h1>
+                        <h3 class="DocSpaciality">Pediatrician 👶</h3>
+                        <strong class="DocExpiriance">8 Years of Experience 🌈</strong>
+                        <p class="DocAvord">🏆 Best Pediatrician Award 2023</p>
+                        <p class="DocAbout">"Dedicated to nurturing healthy futures for children
+                            through expert care and guidance." 🧸</p>
+                    </div>
+                    <img src="/Image/S4.png" alt="Dr. Ayesha Khan">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Rajesh Gupta 🏥</h1>
+                        <h3 class="DocSpaciality">Oncologist 🎗️</h3>
+                        <strong class="DocExpiriance">12 Years of Experience 💼</strong>
+                        <p class="DocAvord">🏆 Cancer Care Excellence Award</p>
+                        <p class="DocAbout">"Empowering patients to overcome cancer with
+                            cutting-edge treatments and holistic support." 🌟</p>
+                    </div>
+                    <img src="/Image/S5.png" alt="Dr. Rajesh Gupta">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Nisha Patel 🧠</h1>
+                        <h3 class="DocSpaciality">Neurologist 🌀</h3>
+                        <strong class="DocExpiriance">9 Years of Experience 📚</strong>
+                        <p class="DocAvord">🏆 Neuroscience Innovation Award</p>
+                        <p class="DocAbout">"Striving to unlock the mysteries of the brain to
+                            provide exceptional neurological care." 🧠</p>
+                    </div>
+                    <img src="/Image/S2.png" alt="Dr. Nisha Patel">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Arjun Mehta 🌍</h1>
+                        <h3 class="DocSpaciality">General Physician 🩺</h3>
+                        <strong class="DocExpiriance">5 Years of Experience 🌟</strong>
+                        <p class="DocAvord">🏆 Excellence in Patient Care</p>
+                        <p class="DocAbout">"Dedicated to providing holistic health solutions for
+                            families and individuals." 💖</p>
+                    </div>
+                    <img src="/Image/S4.png" alt="Dr. Arjun Mehta">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="DocterIDCard">
+                    <div class="Details">
+                        <h1 class="DocName">Dr. Kavita Das 🎯</h1>
+                        <h3 class="DocSpaciality">Psychiatrist 🧘</h3>
+                        <strong class="DocExpiriance">11 Years of Experience 🛋️</strong>
+                        <p class="DocAvord">🏆 Mental Health Advocate Award</p>
+                        <p class="DocAbout">"Passionate about breaking mental health stigma and
+                            providing compassionate care." 🌼</p>
+                    </div>
+                    <img src="/Image/S5.png" alt="Dr. Kavita Das">
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- ++++++++++++++++++ -->
+
+
+
+    <!-- Main Hero Section -->
+    <div class="container">
+
+        <h1 id="he"></h1>
+        <!-- <p>Find best doctors across specialities or hospitals in your city.</p> -->
+
+        <div class="grid">
+            <div class="card" data-aos="fade-right" data-aos-delay="400" data-aos-offset="350">
+                <img src="/Image/t1.png" alt="Book Lab Test">
+                <div class="card-content">
+                    <h3>Book Lab Test</h3>
+                    <p>It's fast, easy and secure</p>
+                    <a href="#">Find Diagnostic Center</a>
+                    <p class="offer">Get Upto 25% OFF On Lab Test</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="fade-down-right" data-aos-delay="400" data-aos-offset="350">
+                <img src="/Image/t2.png" alt="Book Appointment">
+                <div class="card-content">
+                    <h3>Book Appointment</h3>
+                    <p>For hospital & clinical admissions.</p>
+                    <a href="#">Find Doctors Now</a>
+                    <p class="offer">Get Upto 15% OFF</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="fade-down-left" data-aos-delay="400" data-aos-offset="350">
+                <img src="/Image/t3.png" alt="Buy Medicine">
+                <div class="card-content">
+                    <h3>Buy Medicine</h3>
+                    <p>We got all your health needs covered!</p>
+                    <a href="#">Buy Now</a>
+                    <p class="offer">Get Upto 25% OFF On Medicines</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="fade-left" data-aos-delay="400" data-aos-offset="350">
+                <img src="/Image/t4.png" alt="Surgery Assistance">
+                <div class="card-content">
+                    <h3>SURGERY ASSISTANCE</h3>
+                    <p>For best and affordable Surgical Treatment.</p>
+                    <a href="#">Consult Now</a>
+                    <p class="offer">Get Upto 15% Savings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="grid">
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="300" data-aos-offset="420">
+                <img src="/Image/t1.png" alt="Book Lab Test">
+                <div class="card-content">
+                    <h3>Book Lab Test</h3>
+                    <p>It's fast, easy and secure</p>
+                    <a href="#">Find Diagnostic Center</a>
+                    <p class="offer">Get Upto 25% OFF On Lab Test</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="300" data-aos-offset="420">
+                <img src="/Image/t2.png" alt="Book Appointment">
+                <div class="card-content">
+                    <h3>Book Appointment</h3>
+                    <p>For hospital & clinical admissions.</p>
+                    <a href="#">Find Doctors Now</a>
+                    <p class="offer">Get Upto 15% OFF</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="300" data-aos-offset="420">
+                <img src="/Image/t3.png" alt="Buy Medicine">
+                <div class="card-content">
+                    <h3>Buy Medicine</h3>
+                    <p>We got all your health needs covered!</p>
+                    <a href="#">Buy Now</a>
+                    <p class="offer">Get Upto 25% OFF On Medicines</p>
+                </div>
+            </div>
+
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="300" data-aos-offset="420">
+                <img src="/Image/t4.png" alt="Surgery Assistance">
+                <div class="card-content">
+                    <h3>SURGERY ASSISTANCE</h3>
+                    <p>For best and affordable Surgical Treatment.</p>
+                    <a href="#">Consult Now</a>
+                    <p class="offer">Get Upto 15% Savings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Poster Ki Image Hai -->
+    <div class="posterDiv">
+        <!-- <img src="/Image/PosterImage.jpg" alt="" data-aos="fade-down-right" data-aos-delay="300"
+            data-aos-offset="350"> -->
+            <video src="/vidio/vidio.mp4" autoplay muted loop preload="auto"
+            poster="/images/poster.jpg" playsinline data-aos="zoom-out-up" data-aos-duration="1500" class="vid" ></video>
+    </div>
+    <hr>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Footer Ke Liye Html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="section">
+                <h4 data-aos="fade-down">About Us</h4>
+                <ul>
+                    <li  data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li  data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li  data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li  data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li  data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li  data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li  data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li  data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li  data-aos="fade-right"><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Services</h4>
+                <ul>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Contact Us</h4>
+                <ul>
+                    <li  data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li  data-aos="fade-left"><a href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li  data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li  data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li  data-aos="fade-left"><a href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li  data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li  data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li  data-aos="fade-left"><a href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li  data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Hospital Name. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++ -->
+
+
+
+    <!--+++++++++++++++++++ Initialize Swiper JS Code Hare ++++++++++++++++++++++++-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- +++++++++++++++++ Script Link of Test And Image Animation ++++++++++++++++ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- ++++++++++++++++++++++ MAIN JAVSCRIPT CODE +++++++++++++++++++++++++++++++ -->
+    <script src="script.js"> </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+    <!-- +++++++++++++++++++++   TYPE Script Ke Liye Hai ++++++++++++++++++++++++++ -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#he', {
+            strings: [" All Madical Faicility ", " Surjari and medicines ", " 10 Year of experience"],
+            typeSpeed: 50,
+            loop: true,
+        });
+    </script>
+
+
+</body>
+
+</html>

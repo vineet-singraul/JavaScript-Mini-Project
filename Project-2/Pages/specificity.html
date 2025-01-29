@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/download.png">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main page style link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Link of Text And Image Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title id="he">Home Page</title>
+
+</head>
+
+<body>
+    <!-- Nav of Medical Care -->
+    <nav>
+        <div id="Logo">
+            <img src="/Image/download.png" class="image" data-aos="flip-left"
+                data-aos-duration="2000">
+            <p id="manu" onclick="DisplayList()" data-aos="fade-down">🏥</p>
+        </div>
+        <div id="MoreContaines">
+            <ul class="ul" data-aos="fade-down">
+                <li class="list" data-aos="fade-down" data-aos-duration="100"><a
+                        href="/Pages/Home.html">Home</a>
+                </li>
+                <li class="list" data-aos="fade-down" data-aos-duration="500"><a
+                        href="specificity.html">Our
+                        speciality</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="900"><a href="">surgery</a>
+                </li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1300"><a
+                        href="/Pages/Book Apointment.html">Book
+                        Appointment</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1700"><a href="OrderMedicalCare.html">Order
+                        Medical Care</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="2400"><a href="">Vidio
+                        Confrensing</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="3000"><a href="">
+                        Feedback</a></li>
+            </ul>
+        </div>
+
+        <div id="userDetails" data-aos="fade-left" data-aos-duration="2000">
+            <div class="logoDivuser">
+                <i class="fa-solid fa-user" id="Location"></i>
+            </div>
+            <button>
+                <p id="name"></p>
+            </button>
+            <p id="location"></p>
+        </div>
+    </nav>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Swiper Section of Body -->
+    <section class="hero" id="hero" role="banner">
+        <h1>Our Speciality</h1>
+        <p>Discover what makes us unique. From exceptional quality to unparalleled service, we bring you the best in every aspect.</p>
+        <button class="btn" aria-label="Learn more about our speciality">Learn More</button>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing top-notch services with a commitment to excellence. Our team is passionate about what we do and strives to exceed your expectations.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Service 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="service">
+                <h3>Service 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="service">
+                <h3>Service 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Amazing service! They exceeded my expectations." - John Doe</p>
+        </div>
+        <div class="testimonial">
+            <p>"I highly recommend them! Professional and reliable." - Jane Smith</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to get in touch, please reach out!</p>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    
+    <!-- ++++++++++++++++++ -->
+
+
+
+    <!-- Main Hero Section -->
+         <img src="https://docpulse.com/wp-content/uploads/2020/01/meet-my-doctor-1-1024x441.png" alt="">
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Poster Ki Image Hai -->
+    <div class="posterDiv">
+        <img src="/Image/PosterImage.jpg" alt="" data-aos="fade-down-right" data-aos-delay="300"
+            data-aos-offset="350">
+    </div>
+    <hr>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Footer Ke Liye Html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="section">
+                <h4 data-aos="fade-down">About Us</h4>
+                <ul>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Services</h4>
+                <ul>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Contact Us</h4>
+                <ul>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Hospital Name. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++ -->
+
+
+
+    <!--+++++++++++++++++++ Initialize Swiper JS Code Hare ++++++++++++++++++++++++-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- +++++++++++++++++ Script Link of Test And Image Animation ++++++++++++++++ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- ++++++++++++++++++++++ MAIN JAVSCRIPT CODE +++++++++++++++++++++++++++++++ -->
+    <script src="script.js"> </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+    <!-- +++++++++++++++++++++   TYPE Script Ke Liye Hai ++++++++++++++++++++++++++ -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#he', {
+            strings: [" All Madical Faicility ", " Surjari and medicines ", " 10 Year of experience"],
+            typeSpeed: 50,
+            loop: true,
+        });
+    </script>
+
+
+</body>
+
+</html>

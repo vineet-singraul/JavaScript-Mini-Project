@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/download.png">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main page style link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Link of Text And Image Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title id="he">Home Page</title>
+    <style>
+        #mainDivOfCard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .detailsCard {
+            margin-top: 10px;
+        }
+
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .details {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #d9534f;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav of Medical Care -->
+    <nav>
+        <div id="Logo">
+            <img src="/Image/download.png" class="image" data-aos="flip-left"
+                data-aos-duration="2000">
+            <p id="manu" onclick="DisplayList()" data-aos="fade-down">🏥</p>
+        </div>
+        <div id="MoreContaines">
+            <ul class="ul" data-aos="fade-down">
+                <li class="list" data-aos="fade-down" data-aos-duration="100"><a
+                        href="/Pages/Home.html">Home</a>
+                </li>
+                <li class="list" data-aos="fade-down" data-aos-duration="500"><a
+                        href="specificity.html">Our
+                        speciality</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="900"><a href="">surgery</a>
+                </li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1300"><a
+                        href="/Pages/Book Apointment.html">Book
+                        Appointment</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="1700"><a
+                        href="OrderMedicalCare.html">Order
+                        Medical Care</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="2400"><a href="">Vidio
+                        Confrensing</a></li>
+                <li class="list" data-aos="fade-down" data-aos-duration="3000"><a href="">
+                        Feedback</a></li>
+            </ul>
+        </div>
+
+        <div id="userDetails" data-aos="fade-left" data-aos-duration="2000">
+            <div class="logoDivuser">
+                <i class="fa-solid fa-user" id="Location"></i>
+            </div>
+            <button>
+                <p id="name"></p>
+            </button>
+            <p id="location"></p>
+        </div>
+    </nav>
+    <!-- ++++++++++++++++++ -->
+
+
+    <!-- Swiper Section of Body -->
+    <div id="mainDivOfCard">
+        <div id="card">
+            <img src="/Image/m1.png" alt="">
+            <div id="detailsCard">
+                <strong id="name">Nitacol</strong>
+                <p id="Detais">for any Injury</p>
+                <strong id="price">400 R.S</strong>
+            </div>
+        </div>
+
+        <div id="card">
+            <img src="/Image/m1.png" alt="">
+            <div id="detailsCard">
+                <strong id="name">Nitacol</strong>
+                <p id="Detais">for any Injury</p>
+                <strong id="price">400 R.S</strong>
+            </div>
+        </div>
+
+        <div id="card">
+            <img src="/Image/m1.png" alt="">
+            <div id="detailsCard">
+                <strong id="name">Nitacol</strong>
+                <p id="Detais">for any Injury</p>
+                <strong id="price">400 R.S</strong>
+            </div>
+        </div>
+    </div>
+    <!-- ++++++++++++++++++ -->
+
+
+
+
+
+
+    <!-- Footer Ke Liye Html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="section">
+                <h4 data-aos="fade-down">About Us</h4>
+                <ul>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                    <li data-aos="fade-right"><a href="#">Our Mission</a></li>
+                    <li data-aos="fade-right"><a href="#">Leadership</a></li>
+                    <li data-aos="fade-right"><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Services</h4>
+                <ul>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                    <li data-aos="flip-left"><a href="#">Emergency Care</a></li>
+                    <li data-aos="flip-left"><a href="#">Outpatient Services</a></li>
+                    <li data-aos="flip-left"><a href="#">Specialty Clinics</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4 data-aos="fade-down">Contact Us</h4>
+                <ul>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                    <li data-aos="fade-left"><a href="tel:+1234567890">+1 234 567 890</a></li>
+                    <li data-aos="fade-left"><a
+                            href="mailto:info@hospital.com">info@hospital.com</a></li>
+                    <li data-aos="fade-left"><a href="#">Location & Directions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Hospital Name. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++ -->
+
+
+
+    <!--+++++++++++++++++++ Initialize Swiper JS Code Hare ++++++++++++++++++++++++-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- +++++++++++++++++ Script Link of Test And Image Animation ++++++++++++++++ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+    <!-- ++++++++++++++++++++++ MAIN JAVSCRIPT CODE +++++++++++++++++++++++++++++++ -->
+    <script src="script.js"> </script>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+    <!-- +++++++++++++++++++++   TYPE Script Ke Liye Hai ++++++++++++++++++++++++++ -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#he', {
+            strings: [" All Madical Faicility ", " Surjari and medicines ", " 10 Year of experience"],
+            typeSpeed: 50,
+            loop: true,
+        });
+    </script>
+
+
+</body>
+
+</html>
